@@ -1,0 +1,32 @@
+{
+  "name": "calculo-vx",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prebuild": "node scripts/icons.mjs"
+  },
+  "dependencies": {
+    "mathjs": "15.2.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "workbox-window": "7.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vite-plugin-pwa": "2.0.0",
+    "vitest": "3.2.7"
+  },
+  "packageManager": "pnpm@10.28.2"
+}
