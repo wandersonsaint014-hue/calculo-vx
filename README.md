@@ -22,6 +22,7 @@ corepack enable
 corepack prepare pnpm@10.28.2 --activate
 git clone https://github.com/wandersonsaint014-hue/calculo-vx.git
 cd calculo-vx
+node scripts/lock.mjs
 pnpm install --frozen-lockfile
 pnpm dev
 ```
@@ -52,3 +53,5 @@ Integrais usam ponto flutuante e não herdam a precisão decimal da aritmética.
 Abra uma [issue](https://github.com/wandersonsaint014-hue/calculo-vx/issues) ou pull request. Propostas aguardando avaliação ficam em [ROADMAP](docs/ROADMAP.md); decisões são registradas em [ADRs](docs/decisions/0001-arquitetura.md). Consulte [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md) e [privacidade](docs/PRIVACIDADE.md).
 
 Licença MIT. Projeto educacional: confira resultados importantes de forma independente.
+
+O lockfile validado é armazenado compactado em `scripts/lock-*.txt`; `node scripts/lock.mjs` o restaura sem rede.
