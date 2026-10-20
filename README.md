@@ -8,7 +8,10 @@ Calculadora aberta em português, feita com React, TypeScript, Vite e Math.js. C
 - Aritmética decimal com 28 algarismos significativos (não significa exatidão universal).
 - Derivadas simbólicas de ordem 1 a 5.
 - Equações de segundo e primeiro grau, incluindo casos degenerados e sem raízes reais.
-- Integral definida **aproximada**, por Simpson com 1.000 subintervalos.
+- Integral definida **aproximada**, por Simpson, comparando 500, 1.000 e 2.000 subintervalos.
+- Somas de Riemann configuráveis (2 a 200 retângulos).
+- Exploração de limites: cinco exemplos demonstrados em zero; outras entradas são inconclusivas.
+- Conteúdo educacional, referências e cópia de resultados com procedimento.
 - Gráfico SVG amostrado em 401 pontos.
 - Histórico local apagável; nenhum cálculo é enviado a servidores.
 - Trabalho pesado em Web Worker, interrompido após 8 segundos.
@@ -47,7 +50,7 @@ Em HTTPS, visite o site e toque em **Instalar app** quando o navegador oferecer.
 ## Sintaxe e limites
 Use `*`, `/`, `^`, parênteses e `x`. Funções: `sin`, `cos`, `tan`, `sqrt`, `abs`, `exp`, `log`, `ln`; constantes `pi`, `e`. Trigonometria em radianos. Prefira ponto decimal; uma vírgula fora de funções é aceita (`1,5 + 2`). Argumentos múltiplos, atribuições e acesso a propriedades são bloqueados. Expoentes precisam ser constantes numéricas entre -1000 e 1000. Domínio real apenas.
 
-Integrais usam ponto flutuante e não herdam a precisão decimal da aritmética. Descontinuidades entre amostras podem passar despercebidas. Gráficos também são aproximações. Não há limites, integrais simbólicas, prova passo a passo completa, verificação numérica de derivadas ou IA remota implementados. Os passos apresentados são resumos do procedimento.
+Integrais usam ponto flutuante e não herdam a precisão decimal da aritmética. Descontinuidades entre amostras podem passar despercebidas. Gráficos também são aproximações. Não há resolvedor geral de limites, integrais simbólicas, prova passo a passo completa, verificação numérica de derivadas ou IA remota implementados. Os passos apresentados são resumos do procedimento.
 
 ## Participar
 Abra uma [issue](https://github.com/wandersonsaint014-hue/calculo-vx/issues) ou pull request. Propostas aguardando avaliação ficam em [ROADMAP](docs/ROADMAP.md); decisões são registradas em [ADRs](docs/decisions/0001-arquitetura.md). Consulte [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md) e [privacidade](docs/PRIVACIDADE.md).
