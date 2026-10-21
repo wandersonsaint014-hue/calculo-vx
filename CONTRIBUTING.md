@@ -1,5 +1,16 @@
-# Contribuir
+# Contribuir com o Cálculo VX
 
-Abra uma issue com objetivo, exemplo e resultado esperado. Para erro matemático, inclua expressão, domínio, resultado obtido e referência independente. Propostas ainda discutíveis ficam no ROADMAP, não na lista de funcionalidades.
+Pessoas e ideias são bem-vindas. Leia a [direção e política de revisão](docs/GOVERNANCA.md) antes de propor uma mudança. Discordância técnica respeitosa ajuda o projeto; desvio de propósito não precisa virar funcionalidade.
 
-Crie uma branch, altere código e testes, execute `pnpm test`, `pnpm typecheck` e `pnpm build`, depois envie pull request. Não inclua segredos nem dados pessoais. Não integrar serviços pagos ou envio de expressões sem discussão explícita. Mantenha interfaces em português e limitações documentadas.
+## Erros e propostas
+- Erro matemático: expressão, domínio, resultado obtido, resultado esperado e referência independente.
+- Interface/instalação: navegador, sistema, tamanho de tela, passos e captura sem dados pessoais.
+- Ideia: problema real, relação com o conceito, alternativas, critérios de aceitação, licença, privacidade, custo e impacto no offline/tamanho.
+- Vulnerabilidade: siga SECURITY.md; não exponha segredo ou exploração em issue pública.
+
+Propostas discutíveis ficam nas issues e no ROADMAP, sem anúncio como funcionalidade entregue. A avaliação pode aceitar, pedir evidência, guardar ou recusar com justificativa. Mudanças centrais dependem do proprietário.
+
+## Alterar e testar
+Requer Node.js 20.19+ e pnpm 10.28.2. Faça fork ou crie branch, execute `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm typecheck` e `pnpm build`. O lockfile fica na raiz e deve acompanhar mudanças de dependências. Nunca adicione node_modules, dist, credenciais ou dados pessoais.
+
+Envie PR pequeno com problema, solução, evidências e limitações. Não chame teste de unidade de validação visual, nem existência do service worker de teste offline. Informe testes não executados. Execute código de terceiros apenas em ambiente isolado e revisado. Mantenha interface/documentação em português e preserve licença e autoria.

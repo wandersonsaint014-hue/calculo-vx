@@ -25,7 +25,6 @@ corepack enable
 corepack prepare pnpm@10.28.2 --activate
 git clone https://github.com/wandersonsaint014-hue/calculo-vx.git
 cd calculo-vx
-node scripts/lock.mjs
 pnpm install --frozen-lockfile
 pnpm dev
 ```
@@ -53,8 +52,16 @@ Use `*`, `/`, `^`, parênteses e `x`. Funções: `sin`, `cos`, `tan`, `sqrt`, `a
 Integrais usam ponto flutuante e não herdam a precisão decimal da aritmética. Descontinuidades entre amostras podem passar despercebidas. Gráficos também são aproximações. Não há resolvedor geral de limites, integrais simbólicas, prova passo a passo completa, verificação numérica de derivadas ou IA remota implementados. Os passos apresentados são resumos do procedimento.
 
 ## Participar
+
+Ideias são revisadas pela [política de governança](docs/GOVERNANCA.md): preservar o conceito, avaliar evidências e justificar decisões. Sugestões discutíveis ficam registradas; desvios claros podem ser recusados.
 Abra uma [issue](https://github.com/wandersonsaint014-hue/calculo-vx/issues) ou pull request. Propostas aguardando avaliação ficam em [ROADMAP](docs/ROADMAP.md); decisões são registradas em [ADRs](docs/decisions/0001-arquitetura.md). Consulte [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md) e [privacidade](docs/PRIVACIDADE.md).
 
 Licença MIT. Projeto educacional: confira resultados importantes de forma independente.
 
-O lockfile validado é armazenado compactado em `scripts/lock-*.txt`; `node scripts/lock.mjs` o restaura sem rede.
+O lockfile padrão `pnpm-lock.yaml` fica na raiz, para instalação reproduzível e leitura por ferramentas de dependências. Os arquivos compactados antigos em `scripts/lock-*.txt` são legado, não a fonte da instalação atual.
+
+## Estado da validação
+
+Testes automatizados, tipagem e build devem ser confirmados a cada alteração. A bateria visual anterior teve evidência parcial em 320 px, mas não aprovou desktop/tablet, instalação real ou recarga totalmente offline. Não há prévia publicada nesta revisão. Veja [registro técnico](docs/REVISAO-OTIMIZADA.md).
+
+Amostragem numérica recusa extremos indistinguíveis e malhas sem resolução em ponto flutuante. O gráfico aceita extremos como `-1,5` e `pi`. Quebras de curva são conservadoras e podem interromper funções muito íngremes; não constituem detecção geral de descontinuidades.

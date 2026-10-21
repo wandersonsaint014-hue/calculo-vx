@@ -1,12 +1,18 @@
 ---
 name: Proposta para discussão
-about: Guardar ideia e critérios antes de implementar
+about: Guardar uma ideia e avaliar seu alinhamento antes de implementar
 title: "[Proposta] "
 ---
-## Objetivo
+## Problema e público beneficiado
 
-## Alternativas e referências
+## Relação com o conceito
+Consulte docs/GOVERNANCA.md. Como a ideia preserva cálculo verificável, execução local, privacidade e uso no celular?
+
+## Solução, alternativas e referências
+Separe fatos verificados de hipóteses.
 
 ## Critérios de aceitação e testes
 
-## Privacidade, licença e custo
+## Privacidade, licença, custo e impacto no offline/tamanho
+
+## O que ainda precisa ser discutido
