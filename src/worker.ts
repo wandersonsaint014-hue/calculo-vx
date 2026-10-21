@@ -1,6 +1,6 @@
 /// <reference lib="webworker" />
-import { calculate, derivative, solveQuadratic, integrate, sampleGraph } from './engine'
-const operations = { calculate, derivative, solveQuadratic, integrate, sampleGraph }
+import { calculate, derivative, solveQuadratic, integrate, sampleGraph, riemann, exploreLimit } from './engine'
+const operations = { calculate, derivative, solveQuadratic, integrate, sampleGraph, riemann, exploreLimit }
 self.onmessage = (event: MessageEvent) => {
   const { id, operation, args } = event.data ?? {}
   try {
