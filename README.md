@@ -69,4 +69,4 @@ Amostragem numérica recusa extremos indistinguíveis e malhas sem resolução e
 
 ## Avaliações e decisões consolidadas
 
-Veja [o estado técnico e as avaliações](docs/AVALIACOES-CONSOLIDADAS.md) e [os agentes de programação avaliados](docs/AGENTES-AVALIADOS.md). A correção de estabilidade das raízes já está no código. A alternativa HTML portátil permanece experimental; Copilot, OpenHands e Aider foram avaliados, não ativados. Repositório público não equivale a Pages publicado. Resultados históricos de build/testes não aprovam automaticamente a revisão atual.
+Veja [o estado técnico e as avaliações](docs/AVALIACOES-CONSOLIDADAS.md). A correção de estabilidade das raízes já está no código. A alternativa HTML portátil permanece experimental. Repositório público não equivale a Pages publicado. Resultados históricos de build/testes não aprovam automaticamente a revisão atual.

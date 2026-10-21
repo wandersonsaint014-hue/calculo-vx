@@ -1,6 +1,6 @@
 # Avaliações consolidadas do Cálculo VX
 
-Este registro integra as avaliações técnicas e de ferramentas já realizadas. Documentar uma alternativa não significa aprovar sua implementação. Referência de código examinada antes desta integração documental: `33179e6029b0635195b4d27f657a21f5eed77f6b` em `main`.
+Este registro integra as avaliações técnicas da calculadora já realizadas. Documentar uma alternativa não significa aprovar sua implementação. Referência de código examinada antes desta integração documental: `33179e6029b0635195b4d27f657a21f5eed77f6b` em `main`.
 
 ## O que já está incorporado no código
 
@@ -33,9 +33,8 @@ Foi criada uma cópia isolada baseada no commit de referência e gerado localmen
 
 Antes de distribuir: preservar a fonte reproduzível, concluir a compilação, testar abertura por arquivo local e por HTTPS, cálculos de referência, erros, Worker e navegadores móveis. Só afirmar operação sem rede quando observada especificamente nesse formato.
 
-## Decisões para ferramentas e propostas
+## Decisões para propostas da calculadora
 
-- [Agentes de programação avaliados](AGENTES-AVALIADOS.md): pareceres e fontes, sem contratação, instalação ou concessão de acesso.
 - [Roadmap](ROADMAP.md): separar funcionalidades incorporadas das propostas pendentes.
 - [Governança](GOVERNANCA.md): branch, revisão, evidências, licença, custo e privacidade antes de integrar funcionalidades novas.
 - CAS geral, IA explicativa, Simpson adaptativo, KaTeX e exportação continuam propostas, não funcionalidades concluídas.

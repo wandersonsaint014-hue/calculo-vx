@@ -23,7 +23,6 @@ Registre o parecer na própria issue: alinhada, precisa de evidência/ajustes, g
 
 - Estabilidade quadrática: correção incorporada e testes em `src/quadratic-stability.test.ts`; ampliar cobertura e consolidar validação.
 - HTML portátil: protótipo local gerado, validação de navegador inconclusiva; não distribuído como versão estável ou PWA.
-- Agentes: Copilot é candidato prioritário no GitHub; OpenHands para infraestrutura própria; Aider para edição acompanhada. Nenhum ativado.
 - Pages: última tentativa registrada bloqueada por regra de ambiente; não modificar proteções sem autorização.
 
-Detalhes e condições: [avaliações consolidadas](AVALIACOES-CONSOLIDADAS.md) e [agentes avaliados](AGENTES-AVALIADOS.md).
+Detalhes e condições: [avaliações consolidadas](AVALIACOES-CONSOLIDADAS.md).
