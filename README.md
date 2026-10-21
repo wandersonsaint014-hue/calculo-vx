@@ -43,7 +43,7 @@ pnpm preview
 
 [![Publicar no Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wandersonsaint014-hue/calculo-vx)
 
-O botão inicia uma publicação na conta de quem clicar; não instala nem contrata nada sem as etapas do provedor. Também há fluxo manual de GitHub Pages em Actions: é preciso configurar **Settings → Pages → Source: GitHub Actions**, depois executar **Publicar Pages**. O site só existe depois de o deploy concluir.
+O botão inicia uma publicação na conta de quem clicar; não instala nem contrata nada sem as etapas do provedor. Também há fluxo de GitHub Pages em Actions, automático para alterações de código em `main` e com execução manual: é preciso configurar **Settings → Pages → Source: GitHub Actions**, depois executar **Publicar Pages**. O site só existe depois de o deploy concluir.
 
 Em HTTPS, visite o site e toque em **Instalar app** quando o navegador oferecer. No Android: menu → Instalar aplicativo/Adicionar à tela inicial. No iPhone/iPad: Safari → Compartilhar → Adicionar à Tela de Início. O navegador exige confirmação; instalação silenciosa não é permitida. Sem loja/APK nesta versão.
 
@@ -66,3 +66,7 @@ O lockfile validado continua compactado em `scripts/lock-*.txt`; `node scripts/l
 Testes automatizados, tipagem e build devem ser confirmados a cada alteração. A bateria visual anterior teve evidência parcial em 320 px, mas não aprovou desktop/tablet, instalação real ou recarga totalmente offline. Não há prévia publicada nesta revisão. Veja [registro técnico](docs/REVISAO-OTIMIZADA.md).
 
 Amostragem numérica recusa extremos indistinguíveis e malhas sem resolução em ponto flutuante. O gráfico aceita extremos como `-1,5` e `pi`. Quebras de curva são conservadoras e podem interromper funções muito íngremes; não constituem detecção geral de descontinuidades.
+
+## Avaliações e decisões consolidadas
+
+Veja [o estado técnico e as avaliações](docs/AVALIACOES-CONSOLIDADAS.md) e [os agentes de programação avaliados](docs/AGENTES-AVALIADOS.md). A correção de estabilidade das raízes já está no código. A alternativa HTML portátil permanece experimental; Copilot, OpenHands e Aider foram avaliados, não ativados. Repositório público não equivale a Pages publicado. Resultados históricos de build/testes não aprovam automaticamente a revisão atual.

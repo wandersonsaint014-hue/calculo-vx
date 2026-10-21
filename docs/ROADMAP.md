@@ -4,7 +4,7 @@ Nenhum item desta lista é promessa ou funcionalidade concluída. Abra uma issue
 
 ## Próximas investigações
 1. Integral adaptativa: erro estimado, convergência, oscilações e singularidades; comparar com referência independente.
-2. Raízes numericamente estáveis para coeficientes extremos, com testes antes de substituir o método.
+2. Ampliar a validação das raízes numericamente estáveis já incorporadas, incluindo coeficientes extremos e referências independentes. A correção e seus testes estão em `main`; isso não significa bateria completa da versão atual aprovada.
 3. Limites gerais e integração simbólica: motor, licença e distinção rigorosa entre prova e heurística. Os cinco exemplos atuais não são um CAS geral.
 4. Explicação pedagógica: regras intermediárias verificadas, acessibilidade e eventual renderização KaTeX.
 5. Acessibilidade: leitor de tela, contraste e navegação por teclado.
@@ -18,3 +18,12 @@ Nenhum item desta lista é promessa ou funcionalidade concluída. Abra uma issue
 Somas de Riemann configuráveis, cinco exemplos de limites em zero, comparação de malhas de Simpson, painel educacional e cópia de resultados. Motor de amostragem compilado uma vez por operação, proteção contra intervalos indistinguíveis em ponto flutuante e extremos do gráfico com sintaxe consistente. Isso não resolve as limitações gerais descritas acima.
 
 Registre o parecer na própria issue: alinhada, precisa de evidência/ajustes, guardada para análise ou fora do escopo. Ideias ambíguas ou mudanças centrais vão ao proprietário. Issues atuais #4 e #5 permanecem pertinentes; não foram recusadas.
+
+## Avaliações adicionais registradas
+
+- Estabilidade quadrática: correção incorporada e testes em `src/quadratic-stability.test.ts`; ampliar cobertura e consolidar validação.
+- HTML portátil: protótipo local gerado, validação de navegador inconclusiva; não distribuído como versão estável ou PWA.
+- Agentes: Copilot é candidato prioritário no GitHub; OpenHands para infraestrutura própria; Aider para edição acompanhada. Nenhum ativado.
+- Pages: última tentativa registrada bloqueada por regra de ambiente; não modificar proteções sem autorização.
+
+Detalhes e condições: [avaliações consolidadas](AVALIACOES-CONSOLIDADAS.md) e [agentes avaliados](AGENTES-AVALIADOS.md).
