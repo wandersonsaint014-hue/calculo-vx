@@ -156,12 +156,21 @@ return { value: `x = ${valueText(root)}`, steps: [...steps, 'Equação linear (a
 const discriminant = math.subtract(math.multiply(B, B), math.multiply(4, A, C))
 steps.push(`Discriminante: ${valueText(discriminant)}`)
 if (discriminant.isNegative()) return { value: 'sem raízes reais', steps: [...steps, 'Discriminante negativo.'] }
-const denominator = math.multiply(2, A)
+if (discriminant.equals(zero)) {
+const repeatedRoot = math.divide(math.unaryMinus(B), math.multiply(2, A))
+return { value: `x = ${valueText(repeatedRoot)}`, steps: [...steps, 'Raiz real dupla.'] }
+}
 const root = math.sqrt(discriminant)
-const x1 = math.divide(math.add(math.unaryMinus(B), root), denominator)
-const x2 = math.divide(math.subtract(math.unaryMinus(B), root), denominator)
-if (discriminant.equals(zero)) return { value: `x = ${valueText(x1)}`, steps: [...steps, 'Raiz real dupla.'] }
-return { value: `x₁ = ${valueText(x1)}, x₂ = ${valueText(x2)}`, steps: [...steps, 'Duas raízes reais.'] }
+// Soma de mesmo sinal evita cancelar B com sqrt(discriminante).
+// A outra raiz vem do produto x₁*x₂ = C/A, sem subtração instável.
+const signedRoot = B.isNegative() ? math.unaryMinus(root) : root
+const q = math.divide(math.unaryMinus(math.add(B, signedRoot)), 2)
+const stableRoot = math.divide(q, A)
+const companionRoot = math.divide(C, q)
+// Preserva a ordem histórica: x₁ usa +sqrt e x₂ usa -sqrt.
+const x1 = B.isNegative() ? stableRoot : companionRoot
+const x2 = B.isNegative() ? companionRoot : stableRoot
+return { value: `x₁ = ${valueText(x1)}, x₂ = ${valueText(x2)}`, steps: [...steps, 'Duas raízes reais; fórmula numericamente estável e relação do produto das raízes. A precisão continua finita.'] }
 }
 function polynomial(node: any): number[] | null {
 if (node.type === 'ParenthesisNode') return polynomial(node.content)
