@@ -25,6 +25,7 @@ corepack enable
 corepack prepare pnpm@10.28.2 --activate
 git clone https://github.com/wandersonsaint014-hue/calculo-vx.git
 cd calculo-vx
+node scripts/lock.mjs
 pnpm install --frozen-lockfile
 pnpm dev
 ```
