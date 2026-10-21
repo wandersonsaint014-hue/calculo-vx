@@ -58,7 +58,7 @@ Abra uma [issue](https://github.com/wandersonsaint014-hue/calculo-vx/issues) ou 
 
 Licença MIT. Projeto educacional: confira resultados importantes de forma independente.
 
-O lockfile padrão `pnpm-lock.yaml` fica na raiz, para instalação reproduzível e leitura por ferramentas de dependências. Os arquivos compactados antigos em `scripts/lock-*.txt` são legado, não a fonte da instalação atual.
+O lockfile validado continua compactado em `scripts/lock-*.txt`; `node scripts/lock.mjs` o restaura sem rede antes da instalação congelada.
 
 ## Estado da validação
 

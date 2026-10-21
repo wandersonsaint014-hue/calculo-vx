@@ -11,6 +11,6 @@ Pessoas e ideias são bem-vindas. Leia a [direção e política de revisão](doc
 Propostas discutíveis ficam nas issues e no ROADMAP, sem anúncio como funcionalidade entregue. A avaliação pode aceitar, pedir evidência, guardar ou recusar com justificativa. Mudanças centrais dependem do proprietário.
 
 ## Alterar e testar
-Requer Node.js 20.19+ e pnpm 10.28.2. Faça fork ou crie branch, execute `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm typecheck` e `pnpm build`. O lockfile fica na raiz e deve acompanhar mudanças de dependências. Nunca adicione node_modules, dist, credenciais ou dados pessoais.
+Requer Node.js 20.19+ e pnpm 10.28.2. Faça fork ou crie branch, execute `node scripts/lock.mjs`, `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm typecheck` e `pnpm build`. O lockfile é restaurado dos arquivos compactados versionados em scripts/; mudanças de dependências devem atualizar esses arquivos de forma consistente. Nunca adicione node_modules, dist, credenciais ou dados pessoais.
 
 Envie PR pequeno com problema, solução, evidências e limitações. Não chame teste de unidade de validação visual, nem existência do service worker de teste offline. Informe testes não executados. Execute código de terceiros apenas em ambiente isolado e revisado. Mantenha interface/documentação em português e preserve licença e autoria.

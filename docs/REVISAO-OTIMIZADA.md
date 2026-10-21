@@ -6,7 +6,7 @@
 - Extremos do gráfico usam o mesmo parser restrito, aceitando vírgula decimal fora de funções e constantes como pi.
 - Quebras conservadoras de curvas em saltos extremos ou mudanças de sinal de grande magnitude. Heurística, não prova de continuidade; pode interromper curvas válidas íngremes.
 - Proteção adicional contra submissão durante operação ocupada.
-- Lockfile padrão na raiz; CI e publicação manual usam instalação congelada sem restauração de arquivo compactado.
+- Preservada a instalação congelada com restauração do lockfile compactado já versionado; CI e publicação continuam sem mudanças de fluxo.
 - Governança, contribuição e modelos de issue/PR deixam explícitos conceito, evidências e critérios para revisão de ideias.
 
 ## Evidências desta revisão
